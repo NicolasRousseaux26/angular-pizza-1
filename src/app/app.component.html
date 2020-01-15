@@ -1,12 +1,5 @@
 <h1>{{ title }}</h1>
-<div *ngIf="selectedPizza">
-  <h2>{{ selectedPizza?.name }}</h2>
-  <div>ID: {{ selectedPizza.id }}</div>
-  <div>Prix: {{ selectedPizza.price }}</div>
-
-  <!-- ngModel est une directive d'Angular -->
-  <input [(ngModel)]="selectedPizza.name">
-</div>
+<app-pizza [pizza]="selectedPizza"></app-pizza>
 
 <!--
   <input [value]="selectedPizza.name" (keyup)="selectedPizza.name = $event.target.value">
