@@ -1,8 +1,6 @@
 <h1>{{ title }}</h1>
 <app-pizza [pizza]="selectedPizza"></app-pizza>
 
-<app-author [user]="user"></app-author>
-
 <!--
   <input [value]="selectedPizza.name" (keyup)="selectedPizza.name = $event.target.value">
 -->
@@ -14,3 +12,7 @@
     {{ pizza.name }}
   </li>
 </ul>
+
+<h2>Les TPs :</h2>
+<app-author [user]="user"></app-author>
+<app-ingredient-list [ingredients]="ingredients"></app-ingredient-list>

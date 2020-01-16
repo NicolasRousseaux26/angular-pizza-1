@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Pizza } from './models/pizza.model';
 import { User } from './models/user.model';
+import { Ingredient } from './models/ingredient.model';
 
 const PIZZAS: Pizza[] = [
   { id: 1, name: 'Reine', price: 12 },
@@ -25,12 +26,16 @@ export class AppComponent {
     avatar: 'https://www.gravatar.com/avatar/5355a3882df0fdd7689f8b0b5dc50720',
     age: null
   };
+  ingredients: Ingredient[] = [
+    { name: 'Tomate', image: 'tomate.jpg', weight: 50, price: 2 },
+    { name: 'Olive', image: 'olive.jpeg', weight: 5, price: 1 }
+  ];
 
   constructor() {
-    this.calculateAge('1991-11-18');
+    this.calculateAge();
   }
 
-  private calculateAge(date: string): void {
+  private calculateAge(): void {
     let currentDate = Date.now(); // 2020-01-16 en timestamp (millisecondes)
     let birthDate = (new Date(this.user.birthday)).getTime(); // 1991-11-18 en timestamp (millisecondes)
     let timeDiff = currentDate - birthDate;
