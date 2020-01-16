@@ -3,8 +3,11 @@ $color: lightgreen;
 li {
     transition: 0.5s;
 
-    &:hover {
+    &:hover, &.selected {
         cursor: pointer;
         box-shadow: 1px 1px 1px 1px lightgrey;
     }
 }
+
+// Sans le & : li .selected {}
+// Avec le & : li.selected {}
