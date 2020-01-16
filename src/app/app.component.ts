@@ -30,6 +30,7 @@ export class AppComponent {
     { name: 'Tomate', image: 'tomate.jpg', weight: 50, price: 2 },
     { name: 'Olive', image: 'olive.jpeg', weight: 5, price: 1 }
   ];
+  selectedIngredient: Ingredient;
 
   constructor() {
     this.calculateAge();
@@ -48,5 +49,10 @@ export class AppComponent {
     // On récupère la pizza cliquée
     console.log(pizza);
     this.selectedPizza = pizza;
+  }
+
+  selectIngredient(event: Ingredient) {
+    console.log(event);
+    this.selectedIngredient = event;
   }
 }
