@@ -7,8 +7,14 @@
 
 <h2>Les pizzas</h2>
 
+<input type="range" value="2"
+       step="1"
+       min="1"
+       [max]="pizzas.length"
+       [(ngModel)]="number"
+       *ngIf="pizzas.length > 0">
 <div class="row">
-    <div *ngFor="let pizza of pizzas"
+    <div *ngFor="let pizza of pizzas | slice:0:number"
         (click)="onSelect(pizza)"
         class="col-3"
     >
