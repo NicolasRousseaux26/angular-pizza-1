@@ -8,6 +8,7 @@
                 <p>Prix HT : {{ pizza.price }}</p>
                 <p>Prix TTC : {{ pizza.price | tax }}</p>
                 <a routerLink="/pizzas/{{ pizza.id }}" class="btn btn-primary">Voir la pizza</a>
+                <button class="btn btn-danger">Supprimer</button>
             </div>
         </div>
     </div>

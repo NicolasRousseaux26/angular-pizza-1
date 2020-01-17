@@ -1,1 +1,4 @@
-<p>pizza-single works!</p>
+<div *ngIf="pizza">
+    {{ pizza | json }}
+    <h1>{{ pizza.name }}</h1>
+</div>
