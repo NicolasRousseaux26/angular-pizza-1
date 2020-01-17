@@ -20,6 +20,8 @@
       <div class="card" [class.selected]="pizza === selectedPizza">
         <div class="card-body">
           <h5 class="card-title">{{ pizza.name }}</h5>
+          <p>Prix HT : {{ pizza.price }}</p>
+          <p>Prix TTC : {{ pizza.price | tax }}</p>
           <span *ngFor="let selectedIngredient of selectedIngredients; index as i"
             class="badge badge-primary"
           >
@@ -37,4 +39,6 @@
 
   <h2>Les pipes</h2>
   <p>{{ 'Hello' | test:'a':'b' }}</p>
+  <p>TVA 20% : {{ 10 | tax }}</p>
+  <p>TVA 32% : {{ 10 | tax:32 }}</p>
 </div>
