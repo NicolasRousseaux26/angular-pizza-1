@@ -34,4 +34,7 @@
   <h2>Les TPs :</h2>
   <app-author [user]="user"></app-author>
   <app-ingredient-list [ingredients]="ingredients" (select)="selectIngredient($event)"></app-ingredient-list>
+
+  <h2>Les pipes</h2>
+  <p>{{ 'Hello' | test:'a':'b' }}</p>
 </div>
